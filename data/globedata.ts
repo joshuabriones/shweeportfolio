@@ -1,4 +1,4 @@
-import { GlobeConfig } from "@/app/components/ui/globe";
+import { GlobeConfig } from "@/app/_components/ui/globe";
 
 type Position = {
   order: number;

@@ -4,7 +4,7 @@ import { Vortex } from "./ui/vortex";
 
 const Footer = () => {
   return (
-    <footer className="text-white h-24  overflow-hidden">
+    <footer className="text-white min-h-24  overflow-hidden">
       <Vortex
         backgroundColor="black"
         rangeY={800}

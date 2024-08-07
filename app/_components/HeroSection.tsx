@@ -1,15 +1,22 @@
-import { data, globeConfig } from "../../data/globedata";
+"use client";
 
-import { World } from "../components/ui/globe";
-import { SparklesCore } from "../components/ui/sparkles";
+import { data, globeConfig } from "../../data/globedata";
+import dynamic from "next/dynamic";
+// import { World } from "./ui/globe";
+const DynamicWorld = dynamic(
+  () => import("./ui/globe").then((mod) => mod.World),
+  { ssr: false }
+);
+
+import { SparklesCore } from "./ui/sparkles";
 import { FlipWords } from "./ui/flip-words";
 
 import Image from "next/image";
 
 const purple_planet_position = [
   "absolute top-[10%] left-1/3 animate-spin-slow",
-  "absolute top-[18%] right-[30%] animate-spin-slow",
-  "absolute bottom-[25%] right-[32%] animate-spin-slow",
+  "absolute top-[18%] md:right-[30%] animate-spin-slow right-[10%]",
+  "absolute md:bottom-[25%] bottom-[20%] md:right-[32%] animate-spin-slow right-[16%]",
   "absolute bottom-[15%] left-[26%] animate-spin-slow",
 ];
 
@@ -30,7 +37,8 @@ const HeroSection = () => {
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-[328px] h-[328px] relative flex justify-center items-center">
           <div className="absolute w-[500px] h-[500px] rounded-full bg-[url('/assets/ring.png')] bg-cover animate-spin-slow" />
-          <World globeConfig={globeConfig} data={data} />
+          {/* <World globeConfig={globeConfig} data={data} /> */}
+          <DynamicWorld globeConfig={globeConfig} data={data} />
         </div>
       </div>
 

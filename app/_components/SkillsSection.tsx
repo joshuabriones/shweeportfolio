@@ -1,5 +1,8 @@
 "use client";
 
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import H1 from "./H1";
 import SkillCard from "./SkillCard";
 
@@ -35,7 +38,6 @@ export default function SkillsSection() {
       icon: "/icons/nextjs-original.svg",
       years: 2,
     },
-
     {
       lang: "TAILWINDCSS",
       icon: "/icons/html.svg",
@@ -52,6 +54,31 @@ export default function SkillsSection() {
       years: 3,
     },
   ];
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section
       id="section-skills"
@@ -59,11 +86,17 @@ export default function SkillsSection() {
       style={{ backgroundImage: "url('/assets/bg-skills-section.png')" }}
     >
       <H1 label="Personal Skills" />
-      <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 mt-20">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={variants}
+        className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 mt-20"
+      >
         {skills.map((skill) => (
           <SkillCard key={skill.lang} skill={skill} />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

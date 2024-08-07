@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 const nav_data: { name: string; id: string }[] = [
   {
