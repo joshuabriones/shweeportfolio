@@ -8,7 +8,7 @@ const projects = [
     description:
       "A dynamic job portal featuring user roles, job listings, and comprehensive application management.",
     image: "/assets/lookingfor_thumbnail.png",
-    url: "https://lookingfor-sb.vercel.app/",
+    url: "https://lookingfor.vercel.app/",
     planet: "/assets/purple_planet.png",
   },
   {
