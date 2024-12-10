@@ -21,7 +21,7 @@ const nav_data: { name: string; id: string }[] = [
 
 const Navbar = () => {
   return (
-    <nav className="z-50 flex flex-col justify-center items-center w-1/3 h-[50px] bg-white bg-opacity-5 rounded-lg fixed bottom-5 left-1/2 transform -translate-x-1/2">
+    <nav className="z-50 flex flex-col justify-center items-center w-4/5 md:w-2/5 lg:w-1/3 h-[50px] bg-white bg-opacity-5 rounded-lg fixed bottom-5 left-1/2 transform -translate-x-1/2">
       <ul className="flex items-center justify-between ">
         {nav_data.map((data) => (
           <li className="relative group">
