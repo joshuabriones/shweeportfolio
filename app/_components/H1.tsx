@@ -9,7 +9,7 @@ interface H1Props {
 
 const H1: React.FC<H1Props> = ({ label }) => {
   return (
-    <h1 className="text-white text-4xl font-regular relative inline">
+    <h1 className="text-white text-4xl font-regular relative mb-10">
       <Image
         src={"/assets/header-circle.png"}
         width={80}
@@ -18,7 +18,7 @@ const H1: React.FC<H1Props> = ({ label }) => {
         className="absolute -top-5 -left-8"
       />
       {label}
-      <div className="h-[2px] w-14 bg-gradient-to-r from-[#FDC898] to-[#172eff7f] absolute -bottom-1 right-0 rounded-lg" />
+      {/* <div className="h-[2px] w-14 bg-gradient-to-r from-[#FDC898] to-[#172eff7f] absolute -bottom-1 right-0 rounded-lg" /> */}
     </h1>
   );
 };

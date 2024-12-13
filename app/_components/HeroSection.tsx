@@ -35,23 +35,22 @@ const HeroSection = () => {
       />
 
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-[328px] h-[328px] relative flex justify-center items-center">
-          <div className="absolute w-[500px] h-[500px] rounded-full bg-[url('/assets/ring.png')] bg-cover animate-spin-slow" />
+        <div className="w-2/3 h-2/5 md:w-1/2 md:h-1/2 relative flex justify-center items-center">
+          <div className="absolute w-[370px] h-[370px] md:w-[500px] md:h-[500px] rounded-full bg-[url('/assets/ring.png')] bg-cover animate-spin-slow" />
           {/* <World globeConfig={globeConfig} data={data} /> */}
           <DynamicWorld globeConfig={globeConfig} data={data} />
         </div>
       </div>
 
       <div className="absolute top-1/3 left-[15%] font-extralight w-[420px]">
-        <h1 className="">Hello.</h1>
         <FlipWords words={words} />
         <p className="text-lg text-white font-medium mt-3">
           I'm Joshua E. Briones
         </p>
         <p className="text-base text-rgba-white-50">
-          A web developer with a focus on frontend development and a growing
-          expertise in backend technologies. I constantly strive to enhance my
-          skills and stay updated with the latest industry trends.
+          A full-stack web developer with 4 years of experience, specializing in
+          the MERN stack, TypeScript, and Next.js. With a strong focus on
+          building dynamic, scalable, and user-friendly web applications
         </p>
       </div>
 
