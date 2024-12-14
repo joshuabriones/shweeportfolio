@@ -35,8 +35,8 @@ const HeroSection = () => {
       />
 
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-2/3 h-2/5 md:w-1/2 md:h-1/2 relative flex justify-center items-center">
-          <div className="absolute w-[370px] h-[370px] md:w-[500px] md:h-[500px] rounded-full bg-[url('/assets/ring.png')] bg-cover animate-spin-slow" />
+        <div className="w-[280px] h-[280px] md:w-1/2 md:h-1/2 relative flex justify-center items-center">
+          <div className="absolute w-[320px] h-[320px] md:w-[500px] md:h-[500px] rounded-full bg-[url('/assets/ring.png')] bg-cover animate-spin-slow" />
           {/* <World globeConfig={globeConfig} data={data} /> */}
           <DynamicWorld globeConfig={globeConfig} data={data} />
         </div>
