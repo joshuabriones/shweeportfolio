@@ -10,6 +10,7 @@ const DynamicWorld = dynamic(
 
 import { SparklesCore } from "./ui/sparkles";
 import { FlipWords } from "./ui/flip-words";
+import { ShootingStars } from "./ui/shooting-stars";
 
 import Image from "next/image";
 
@@ -33,6 +34,7 @@ const HeroSection = () => {
         className="w-full h-full absolute top-0 left-0"
         particleColor="#FFFFFF"
       />
+      <ShootingStars />
 
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-[280px] h-[280px] md:w-1/2 md:h-1/2 relative flex justify-center items-center">
@@ -42,12 +44,12 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute top-1/3 left-[15%] font-extralight w-[420px]">
+      <div className="absolute top-1/3 left-[10%] md:left-[15%] font-extralight w-[300px] md:w-[420px]">
         <FlipWords words={words} />
         <p className="text-lg text-white font-medium mt-3">
           I'm Joshua E. Briones
         </p>
-        <p className="text-base text-rgba-white-50">
+        <p className="text-sm md:text-base text-rgba-white-50">
           A full-stack web developer with 4 years of experience, specializing in
           the MERN stack, TypeScript, and Next.js. With a strong focus on
           building dynamic, scalable, and user-friendly web applications

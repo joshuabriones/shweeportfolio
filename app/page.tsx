@@ -57,11 +57,6 @@ const LandingPage = () => {
 
   return (
     <main>
-      {/* <Navbar /> */}
-      <FloatingDock
-        // mobileClassName="translate-y-20" // only for demo, remove for production
-        items={links}
-      />
       <HeroSection />
       <TracingBeam className="px-3">
         <SkillsSection />

@@ -71,10 +71,11 @@ export default function SkillsSection() {
             {slugs.map((slug) => (
               <div
                 key={slug}
-                className="py-2 px-4 rounded-2xltext-center text-slate-300"
+                className="py-2 px-4 rounded-2xl text-center text-slate-300"
                 style={{
                   border: `2px solid transparent`,
                   borderImage: `${gradients[slug]} 1`,
+                  borderRadius: "20px",
                 }}
               >
                 {skills[slug]}
